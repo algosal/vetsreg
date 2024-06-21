@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  box-sizing: border-box;
+}
+
+/* Hide the scrollbar for WebKit-based browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Optional: Ensure that the element still scrolls */
+.nav-margin {
+  overflow: hidden; /* This hides the scrollbar but also disables scrolling */
+  /* If you still want the element to be scrollable, use 'overflow: auto;' */
+  overflow: auto;
+}

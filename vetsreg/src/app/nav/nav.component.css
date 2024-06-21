@@ -1,0 +1,42 @@
+.nav-margin {
+  display: flex;
+  top: 0;
+  flex-direction: column;
+  max-width: 200px;
+  background-color: blue;
+  color: white;
+  height: auto;
+  padding-top: 15vh;
+  transition: all;
+  height: 100vh;
+  margin-top: 10vh;
+  margin-left: -7vw;
+  /* padding-top: 10vh; */
+  width: 20vw;
+  position: fixed;
+  transition: 1s linear;
+}
+
+.nav-margin:hover {
+  margin-left: 0;
+}
+
+.nav-elements {
+  transition-duration: 1s;
+  /* display: block; */
+
+  height: 5vh;
+  color: black;
+  padding: 10px;
+  padding-top: 20px;
+  background-color: white;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+
+.nav-elements:hover {
+  background-color: blue;
+  color: white;
+  border: none;
+}
