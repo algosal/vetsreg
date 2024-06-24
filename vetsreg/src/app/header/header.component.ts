@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,8 +9,15 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  notAvailable() {
+  // viewReg = output<string>();
+  @Output() viewReg = new EventEmitter<boolean>();
+  oldValue = true;
+
+  register() {
     // alert("not available yet");
-    window.location.href = "https://putveteransfirst.nyc/carts";
+    this.oldValue = !this.oldValue;
+    this.viewReg.emit(this.oldValue);
+    
+    // window.location.href = "https://putveteransfirst.nyc/carts";
   }
 }

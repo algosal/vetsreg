@@ -2,7 +2,6 @@
   display: flex;
 }
 .header-div {
-  display: flex;
   margin: 0;
   padding: 0;
   background-color: red;
@@ -12,7 +11,33 @@
   position: fixed;
 }
 
-.main-copy {
+.main-copy,
+.registration-container {
   margin-top: 20vh;
   margin-left: 20vh;
+}
+
+@media (max-width: 750px) {
+  .main-copy,
+  .registration-container {
+    margin: 10px;
+    margin-top: 20vh;
+  }
+}
+
+@media (max-width: 620px) {
+  .main-copy,
+  .registration-container {
+    margin: 10px;
+    margin-top: 13vh;
+  }
+}
+
+@media (max-width: 450px) {
+  .header-div {
+    justify-content: flex-start;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 }

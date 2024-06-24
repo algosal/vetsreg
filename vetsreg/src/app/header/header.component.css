@@ -3,6 +3,7 @@ h1 {
   padding: 5vh;
   font-size: 10vh;
   height: 10vh;
+  text-align: center;
 }
 h1:hover {
   color: blue;
@@ -23,4 +24,101 @@ h1:hover {
 .register:hover {
   transition-duration: 0.3s;
   background-color: red;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .main-header-container {
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  h1 {
+    flex: 5 1 50px;
+    padding-left: 100px;
+    font-size: 7vh;
+    height: 5vh;
+  }
+
+  .hamburger {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: grey;
+    opacity: 0.7;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .hamburger div {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 2px;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    position: relative;
+  }
+
+  /* Hover Effect */
+  .hamburger:hover .bar1 {
+    transform: translateX(-5px) translateY(5px) rotate(-45deg);
+  }
+
+  .hamburger:hover .bar2 {
+    transform: translateX(5px) translateY(-5px) rotate(45deg);
+  }
+
+  .hamburger:hover .bar3 {
+    transform: translateX(5px) translateY(5px) rotate(-45deg);
+  }
+
+  .hamburger:hover .bar4 {
+    transform: translateX(-5px) translateY(-5px) rotate(45deg);
+  }
+}
+
+@media (max-width: 620px) {
+  h1 {
+    font-size: x-large;
+    height: 5vh;
+    padding: 0;
+    margin-left: 100px;
+  }
+  .main-header-container {
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    flex: 7 1 50px;
+    margin: 0;
+    padding: 0;
+    font-size: x-large;
+    height: 5vh;
+    text-align: left;
+    justify-content: left;
+  }
+  .main-header-container {
+    display: flex;
+    margin: 10px;
+    padding: 5px;
+    justify-content: space-between;
+    gap: 10px;
+  }
 }

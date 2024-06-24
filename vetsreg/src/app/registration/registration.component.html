@@ -1,0 +1,85 @@
+<form (ngSubmit)="onSubmit(registrationForm)" #registrationForm="ngForm" novalidate>
+    <div>
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" [(ngModel)]="formData.firstName" #firstName="ngModel"
+            required>
+        <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)">
+            <small *ngIf="firstName.errors?.['required']">First Name is required.</small>
+        </div>
+    </div>
+
+    <div>
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" [(ngModel)]="formData.lastName" #lastName="ngModel" required>
+        <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)">
+            <small *ngIf="lastName.errors?.['required']">Last Name is required.</small>
+        </div>
+    </div>
+
+    <div>
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" [(ngModel)]="formData.dateOfBirth" #dob="ngModel" required
+            (change)="validateDob(registrationForm)">
+        <div *ngIf="dob.invalid && (dob.dirty || dob.touched)">
+            <small *ngIf="dob.errors?.['required']">Date of Birth is required.</small>
+            <small *ngIf="dob.errors?.['dateOfBirthInvalid']">Must be at least 18 years old.</small>
+        </div>
+    </div>
+
+    <div ngModelGroup="genderGroup" #genderGroup="ngModelGroup">
+        <label>Gender</label>
+        <div class="radio-container">
+            <input type="radio" id="male" name="gender" value="male" [(ngModel)]="formData.gender" required>
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female" [(ngModel)]="formData.gender" required>
+            <label for="female">Female</label>
+        </div>
+        <div *ngIf="genderGroup.invalid && (genderGroup.dirty || genderGroup.touched)">
+            <small>Gender is required.</small>
+        </div>
+    </div>
+
+    <div>
+        <label for="branchOfService">Branch of Service</label>
+        <select id="branchOfService" name="branchOfService" [(ngModel)]="formData.branchOfService"
+            #branchOfService="ngModel" required>
+            <option value="" disabled selected>Select Branch</option>
+            <option value="US Army">US Army</option>
+            <option value="US Navy">US Navy</option>
+            <option value="US Airforce">US Airforce</option>
+            <option value="US Coast Guards">US Coast Guards</option>
+            <option value="US Marine Corp">US Marine Corp</option>
+            <option value="Other">Other</option>
+        </select>
+        <div *ngIf="branchOfService.invalid && (branchOfService.dirty || branchOfService.touched)">
+            <small>Branch of Service is required.</small>
+        </div>
+    </div>
+
+    <div>
+        <label for="otherAssociations">Other Associations (Optional)</label>
+        <input type="text" id="otherAssociations" name="otherAssociations" [(ngModel)]="formData.otherAssociations">
+    </div>
+
+    <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" [(ngModel)]="formData.email" #email="ngModel" required email>
+        <div *ngIf="email.invalid && (email.dirty || email.touched)">
+            <small *ngIf="email.errors?.['required']">Email is required.</small>
+            <small *ngIf="email.errors?.['email']">Invalid email format.</small>
+        </div>
+    </div>
+
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" [(ngModel)]="formData.password" #password="ngModel"
+            required minlength="6">
+        <div *ngIf="password.invalid && (password.dirty || password.touched)">
+            <small *ngIf="password.errors?.['required']">Password is required.</small>
+            <small *ngIf="password.errors?.['minlength']">Password must be at least 6 characters long.</small>
+        </div>
+    </div>
+    <!-- <button type="submit" [disabled]="registrationForm.invalid" [ngClass]="{'button-disabled': registrationForm.invalid}">Register</button> -->
+    <button type="submit" [disabled]="registrationForm.invalid"   [class]="{'disabled' : registrationForm.invalid, 'enabled': registrationForm.valid}" >Register</button>
+</form>

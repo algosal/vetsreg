@@ -40,3 +40,16 @@
   color: white;
   border: none;
 }
+
+@media (max-width: 750px) {
+  .main {
+    margin: 0;
+    padding: 0;
+  }
+  .nav-margin {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
