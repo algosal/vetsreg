@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainCopyComponent } from './main-copy.component';
+import { MissionComponent } from './mission.component';
 
-describe('MainCopyComponent', () => {
-  let component: MainCopyComponent;
-  let fixture: ComponentFixture<MainCopyComponent>;
+describe('MissionComponent', () => {
+  let component: MissionComponent;
+  let fixture: ComponentFixture<MissionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MainCopyComponent]
+      imports: [MissionComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(MainCopyComponent);
+    fixture = TestBed.createComponent(MissionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

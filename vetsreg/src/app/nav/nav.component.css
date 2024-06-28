@@ -2,7 +2,7 @@
   display: flex;
   top: 0;
   flex-direction: column;
-  max-width: 200px;
+  width: 200px;
   background-color: blue;
   color: white;
   height: auto;
@@ -47,7 +47,17 @@
     padding: 0;
   }
   .nav-margin {
-    display: none;
+    width: 100vw;
+    margin-left: 0vw;
+    background-color: grey;
+    opacity: 0.9;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  .nav-elements {
+    opacity: 1;
   }
   .hamburger {
     display: block;

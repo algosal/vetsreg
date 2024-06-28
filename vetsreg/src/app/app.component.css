@@ -1,5 +1,6 @@
 .component-container {
   display: flex;
+  padding-top: 20vh;
 }
 .header-div {
   margin: 0;
@@ -11,33 +12,54 @@
   position: fixed;
 }
 
-.main-copy,
-.registration-container {
-  margin-top: 20vh;
-  margin-left: 20vh;
+.mobile-nav-visibility {
+  display: flex;
 }
 
 @media (max-width: 750px) {
-  .main-copy,
-  .registration-container {
-    margin: 10px;
-    margin-top: 20vh;
+  .router-container {
+    padding-top: 20vh;
+  }
+  .mobile-nav {
+    position: fixed;
+    top: 5px;
+    right: 10px;
+  }
+
+  .mobile-nav-visibility {
+    display: none;
   }
 }
 
 @media (max-width: 620px) {
-  .main-copy,
-  .registration-container {
-    margin: 10px;
-    margin-top: 13vh;
-  }
-}
-
-@media (max-width: 450px) {
   .header-div {
     justify-content: flex-start;
     min-width: 100%;
     margin: 0;
     padding: 0;
+  }
+  .component-container {
+    display: flex;
+    padding-top: 10vh;
+  }
+
+  .mobile-nav-visibility {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .router-container {
+    padding-top: 7vh;
+  }
+  .header-div {
+    justify-content: flex-start;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobile-nav-visibility {
+    display: none;
   }
 }

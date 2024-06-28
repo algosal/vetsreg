@@ -9,24 +9,30 @@
 
 
 <main class="main">
+  <div class="header-div">
+    <app-header />
+  </div>
+    <div class="mobile-nav">
+      <app-nav-mobile (mobile_nav_visibility)="mobileVisibility()" />
+    </div>
+  <div [class]="['component-container', mobileNavVisibility]" (click)="onMobileNavClick()">
+    <app-nav />
+  </div>
+  <div class="router-container">
+    <router-outlet />
+  </div>
 
   
-  <div class="header-div">
-    <app-header (viewReg)="onRegister($event)"/>
-  </div>
-  <div class="component-container">
-    <app-nav/>
+  
+  
+    <!-- <app-registration /> -->
 
-    @if (showMission===true) {
+    <!-- @if (showMission===true) {
       <div class="main-copy">
         <app-main-copy [myNotes] = myNotes/>
       </div>
     }@else{
-  <div class="registration-container">
-    <app-registration/>
-  </div>
-    }
-  </div>
+    } -->
  
   
 
