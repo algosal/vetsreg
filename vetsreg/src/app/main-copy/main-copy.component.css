@@ -1,12 +1,12 @@
 .base-space {
-  max-width: 800px;
+  max-width: 70vw;
+  margin: 20px auto;
   padding: 20px;
   background-color: #f7f7f7;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   font-family: "Arial, sans-serif";
   color: #333;
-  margin: 0 auto; /* Centers the container */
 }
 
 p {
@@ -44,7 +44,8 @@ ul li:last-child {
 }
 
 p:last-of-type {
-  text-align: center;
+  /* text-align: center; */
+  text-indent: 0;
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 0;
@@ -55,17 +56,17 @@ app-register-button {
   margin: 20px auto;
   text-align: center;
 }
-
 @media (max-width: 1250px) {
   .base-space {
-    margin-left: 150px;
-    margin-right: 20px;
+    /* max-width: 70vw; */
+    /* margin-left: 16vw; */
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .base-space {
-    margin: 0px;
+    max-width: 100vw;
+    margin: 0px auto;
   }
 }
 

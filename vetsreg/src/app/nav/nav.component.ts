@@ -41,6 +41,8 @@ export class NavComponent {
     this.router.navigate(['/contact']); // Navigate to the contact path
   }
 
- 
+  onCarts() {
+    window.location.href = "carts";
+ }
 
 }

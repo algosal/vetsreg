@@ -25,20 +25,20 @@ h1:hover {
 
 @media (max-width: 650px) {
   h1 {
-    font-size: 7vh;
+    font-size: 6vh;
     height: 5vh;
   }
 }
 
 @media (max-width: 500px) {
   h1 {
-    font-size: 5vh;
+    font-size: 4vh;
   }
 }
 
 @media (max-width: 450px) {
   h1 {
-    font-size: 5vh;
+    font-size: 4vh;
     height: 5vh;
     padding: 10px;
   }

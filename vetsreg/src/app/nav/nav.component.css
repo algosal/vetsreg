@@ -2,11 +2,11 @@
   display: flex;
   top: 0;
   flex-direction: column;
-  width: 200px;
+  /* width: 200px; */
   background-color: blue;
   color: white;
   height: auto;
-  padding-top: 15vh;
+  padding-top: 10vh;
   transition: all;
   height: 100vh;
   margin-top: 10vh;
@@ -41,16 +41,17 @@
   border: none;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .main {
     margin: 0;
     padding: 0;
   }
   .nav-margin {
     width: 100vw;
-    margin-left: 0vw;
+    margin: 0vw;
     background-color: grey;
-    opacity: 0.9;
+    opacity: 0.99;
+    padding: 15vh;
     padding-left: 20px;
     padding-right: 20px;
     box-sizing: border-box;

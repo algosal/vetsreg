@@ -7,11 +7,14 @@ import { MainCopyComponent } from './main-copy/main-copy.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule } from '@angular/forms';
 import { NavMobileComponent } from './nav-mobile/nav-mobile.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, NavComponent, MainCopyComponent, RegistrationComponent, FormsModule, RouterOutlet, NavMobileComponent],
+  imports: [CommonModule, RouterOutlet,
+    HeaderComponent, NavComponent, MainCopyComponent,
+    RegistrationComponent, FormsModule, RouterOutlet, NavMobileComponent, NotFoundComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

@@ -11,13 +11,16 @@
   justify-content: center;
   position: fixed;
 }
-
+.router-container {
+  padding-left: 10vw;
+}
 .mobile-nav-visibility {
   display: flex;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .router-container {
+    padding: 0;
     padding-top: 20vh;
   }
   .mobile-nav {

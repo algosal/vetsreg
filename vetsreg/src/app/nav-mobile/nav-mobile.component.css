@@ -2,7 +2,13 @@
   display: none;
 }
 
-@media (max-width: 750px) {
+@media (orientation: landscape) {
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
   .main-header-container {
     display: flex;
     margin: 10px;
@@ -94,3 +100,9 @@
     gap: 10px;
   }
 }
+
+/* @media (max-width: 800px) and (orientation: landscape) {
+  .hamburger {
+    display: none;
+  }
+} */
