@@ -1,0 +1,8 @@
+<div class="myAPI">
+    @for(todo of myTodos; track todo.id){
+        <h1>Id: {{todo.id}}</h1>
+        <p>title: {{todo.title}}</p>
+        <p>userid : {{todo.userId}}</p>
+        <div [class]="{'completed': todo.completed===true, 'incomplete': todo.completed === false} " > </div>
+    }
+</div>

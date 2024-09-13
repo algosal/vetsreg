@@ -1,0 +1,29 @@
+.myAPI {
+  margin-left: 200px;
+}
+.completed,
+.incomplete {
+  position: relative;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+.completed::after,
+.incomplete::after {
+  content: "";
+  position: absolute;
+  top: -7.4em; /* Adjust this value as needed */
+  right: -10vw; /* Adjust this value as needed */
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+}
+
+.completed::after {
+  background-color: green;
+}
+
+.incomplete::after {
+  background-color: red;
+}
